@@ -4,19 +4,17 @@ import dynamic from 'next/dynamic';
 const Navbar = dynamic(() => import('components/navbar'));
 
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="h-screen flex flex-col dark:bg-gray-900">
+    <div className="h-screen flex flex-col items-center dark:bg-gray-900">
       <Navbar />
-
-      <div className="flex justify-center">
-        <div className="w-full md:max-w-screen-xl">
+      <div className="w-full max-w-screen-2xl flex justify-center">
+        <div className="w-full px-4">
           <Component {...pageProps} />
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default MyApp
+export default App;
