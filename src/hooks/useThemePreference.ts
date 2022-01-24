@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 
 const useThemePreference = () => {
   const [theme, setTheme] = useState<string>(
-    typeof window === 'undefined' ? 'dark' : localStorage.theme || 'dark'
+    typeof window === 'undefined' ? 'light' : localStorage.theme || 'light'
   );
 
-  const colorTheme = theme === 'dark' ? 'light' : 'dark';
+  const colorTheme = theme === 'light' ? 'dark' : 'light';
 
   useEffect(() => {
       const root = window.document.documentElement;
