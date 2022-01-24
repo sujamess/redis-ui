@@ -19,7 +19,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
+
+          <script defer={true} src="https://unpkg.com/@themesberg/flowbite@1.3.0/dist/flowbite.bundle.js"></script>
         </body>
       </Html>
     )

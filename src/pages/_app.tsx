@@ -1,7 +1,8 @@
-import 'styles/tailwind.css'
-import Navbar from 'components/navbar';
+import 'styles/tailwind.css';
+import type { AppProps } from 'next/app';
+import dynamic from 'next/dynamic';
+const Navbar = dynamic(() => import('components/navbar'));
 
-import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
