@@ -5,7 +5,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@themesberg/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js"
   ],
   safelist: [
     'w-64',
@@ -33,6 +33,6 @@ module.exports = {
   },
   darkMode: 'class',
   plugins: [
-    require('@themesberg/flowbite/plugin'),
+    require('flowbite/plugin'),
   ],
 }
