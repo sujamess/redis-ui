@@ -1,9 +1,9 @@
 import 'styles/tailwind.css';
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
+import { RecoilRoot } from 'recoil';
 
 const Navbar = dynamic(() => import('components/navbar'));
-
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,7 +11,9 @@ function App({ Component, pageProps }: AppProps) {
       <Navbar />
       <div className="w-full max-w-screen-2xl flex justify-center">
         <div className="w-full px-4">
-          <Component {...pageProps} />
+          <RecoilRoot>
+            <Component {...pageProps} />
+          </RecoilRoot>
         </div>
       </div>
     </div>
