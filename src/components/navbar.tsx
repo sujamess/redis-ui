@@ -1,9 +1,7 @@
 import useThemePreference from 'hooks/useThemePreference';
 import { NextComponentType } from "next";
 import { Dispatch, SetStateAction } from "react";
-import dynamic from 'next/dynamic';
-
-const Link = dynamic(() => import('next/link'));
+import Link from 'next/link';
 
 const Navbar: NextComponentType = () => {
   const [colorTheme, setTheme] = useThemePreference();
