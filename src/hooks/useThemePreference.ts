@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import { ThemeEnum } from 'types/enums/theme';
 
 const useThemePreference = () => {
   const [theme, setTheme] = useState<string>(
-    typeof window === 'undefined' ? 'light' : localStorage.theme || 'light'
+    typeof window === 'undefined' ? ThemeEnum.Light : localStorage.theme || ThemeEnum.Light
   );
 
-  const colorTheme = theme === 'light' ? 'dark' : 'light';
+  const colorTheme = theme === ThemeEnum.Light ? ThemeEnum.Dark : ThemeEnum.Light;
 
   useEffect(() => {
       const root = window.document.documentElement;
